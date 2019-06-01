@@ -1,0 +1,237 @@
+BMI_LIBS =
+# BMI_LIBS += -static -static-libgcc # Uncomment this to get a static build
+
+CC 	:= g++
+CU	:= /usr/local/cuda/bin/nvcc
+
+INCLUDES = -I./core/include -I./codec/include -I./cudainterface/include -I./tools/include -I./common/include -I/usr/local/cuda/include 
+
+OBJ_TMP_DIR := ../../obj_tmp
+#CU_LIB 	:= -L /usr/local/cuda/lib -l cuda -l cudart
+#release build :
+#COMMON_OPT := -O3  # debug build disable this line
+COMMON_OPT := -O0 # debug build enable this line
+C_OPT := $(COMMON_OPT)
+C_OPT += -msse2 
+C_OPT += -fPIC 
+C_OPT += -fasm-blocks
+C_OPT += -m32
+
+WARN_FLAGS := \
+	-Wall \
+	-Wno-uninitialized \
+	#-Wimplicit \
+#	-Wswitch \
+#	-Wformat \
+#	-Wchar-subscripts \
+#	-Wparentheses \
+#	-Wmultichar \
+#	-Wtrigraphs \
+#	-Wpointer-arith \
+#	-Wcast-align \
+#	-Wreturn-type \
+#	-Wno-unused-function \
+
+C_OPT += -DMAC_OS -DMAC_32 $(WARN_FLAGS) 
+#C_OPT += -DNDEBUG  	# debug build disable this line
+#C_OPT += -D_FINAL	# no-final build disable this line
+C_OPT += -D_DEBUG  	# debug build enable this line
+
+C_OPT += -ggdb 
+CFLAGS = $(INCLUDES) $(C_OPT)
+
+#uncommen next line for debug
+CU_OPT += -D_DEBUG
+#CU_OPT += -DNDEBUG
+CU_OPT := --compiler-options -fno-strict-aliasing
+CU_OPT += $(COMMON_OPT)
+
+CUFLAGS = $(INCLUDES) $(CU_OPT)
+CUFLAGS += $(CU_LIB) -DMAC_OS -DMAC_32 
+
+CU_DEPS		:= 
+
+BIN_DIR = ../../bin
+LIB_DIR = ../lib/Mac-x86-32-gcc
+
+all :: libbmidecoder.a libbmidecoder.so
+
+clean:
+	rm -f $(OBJ_TMP_DIR)/*.o *.a
+
+libbmidecoder.a :: bmi_block_decoder.o \
+	bmi_block_decoder_asm.o \
+	bmi_cpu_dwt_decoder.o \
+	bmi_dwt_asm.o \
+	bmi_mq_decoder.o \
+	dec_dwt.o \
+	dec_init.o \
+	dec_io.o \
+	dec_jp2.o \
+	dec_mq.o \
+	dec_packet.o \
+	dec_syntax.o \
+	dec_t1_comp.o \
+	dec_t1_pass.o \
+	dec_tagtree.o \
+	dec_tsk.o \
+	decoder.o \
+	macsemaphore.o\
+	decoderconcrete.o \
+	encoderconcrete.o \
+	jobqueue.o \
+	cudainterface.o \
+	gpulib.o \
+	gpufunc.o \
+	debugtools.o \
+	imagesaver.o \
+	testclock.o \
+	tiff.o
+	ar -rv $(BIN_DIR)/libbmidecoder.a $(OBJ_TMP_DIR)/*.o $(LIB_SRC)
+	ranlib $(BIN_DIR)/libbmidecoder.a
+
+libbmidecoder.so :: bmi_block_decoder.o \
+	bmi_block_decoder_asm.o \
+	bmi_cpu_dwt_decoder.o \
+	bmi_dwt_asm.o \
+	bmi_mq_decoder.o \
+	dec_dwt.o \
+	dec_init.o \
+	dec_io.o \
+	dec_jp2.o \
+	dec_mq.o \
+	dec_packet.o \
+	dec_syntax.o \
+	dec_t1_comp.o \
+	dec_t1_pass.o \
+	dec_tagtree.o \
+	dec_tsk.o \
+	decoder.o \
+	macsemaphore.o\
+	decoderconcrete.o \
+	encoderconcrete.o \
+	jobqueue.o \
+	cudainterface.o \
+	gpulib.o \
+	gpufunc.o \
+	debugtools.o \
+	imagesaver.o \
+	testclock.o \
+	tiff.o \
+	$(LIB_SRC)
+	$(CC) $(CFLAGS) -dynamiclib $(CU_LIB) -o $(BIN_DIR)/libbmidecoder.so \
+	$(OBJ_TMP_DIR)/*.o \
+	/usr/local/cuda/lib/libcuda.dylib /usr/local/cuda/lib/libcudart.dylib
+
+bmi_block_decoder.o :: ./codec/src/bmi_block_decoder.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/bmi_block_decoder.cpp \
+	      -o $(OBJ_TMP_DIR)/bmi_block_decoder.o
+
+bmi_block_decoder_asm.o :: ./codec/src/bmi_block_decoder_asm.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/bmi_block_decoder_asm.cpp \
+	      -o $(OBJ_TMP_DIR)/bmi_block_decoder_asm.o
+
+bmi_cpu_dwt_decoder.o :: ./codec/src/bmi_cpu_dwt_decoder.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/bmi_cpu_dwt_decoder.cpp \
+	      -o $(OBJ_TMP_DIR)/bmi_cpu_dwt_decoder.o
+
+bmi_dwt_asm.o :: ./codec/src/bmi_dwt_asm.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/bmi_dwt_asm.cpp \
+	      -o $(OBJ_TMP_DIR)/bmi_dwt_asm.o
+
+bmi_mq_decoder.o :: ./codec/src/bmi_mq_decoder.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/bmi_mq_decoder.cpp \
+	      -o $(OBJ_TMP_DIR)/bmi_mq_decoder.o
+
+dec_dwt.o :: ./codec/src/dec_dwt.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_dwt.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_dwt.o	
+		  
+dec_init.o :: ./codec/src/dec_init.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_init.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_init.o
+
+dec_io.o :: ./codec/src/dec_io.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_io.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_io.o
+
+dec_jp2.o :: ./codec/src/dec_jp2.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_jp2.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_jp2.o
+
+dec_mq.o :: ./codec/src/dec_mq.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_mq.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_mq.o
+
+dec_packet.o :: ./codec/src/dec_packet.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_packet.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_packet.o
+
+dec_syntax.o :: ./codec/src/dec_syntax.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_syntax.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_syntax.o
+
+dec_t1_comp.o :: ./codec/src/dec_t1_comp.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_t1_comp.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_t1_comp.o
+
+dec_t1_pass.o :: ./codec/src/dec_t1_pass.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_t1_pass.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_t1_pass.o
+
+dec_tagtree.o :: ./codec/src/dec_tagtree.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_tagtree.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_tagtree.o
+
+dec_tsk.o :: ./codec/src/dec_tsk.cpp
+	$(CC) $(CFLAGS) -c ./codec/src/dec_tsk.cpp \
+	      -o $(OBJ_TMP_DIR)/dec_tsk.o
+
+decoder.o :: ./common/src/decoder.cpp
+	$(CC) $(CFLAGS) -c ./common/src/decoder.cpp \
+	      -o $(OBJ_TMP_DIR)/decoder.o
+
+macsemaphore.o :: ./common/src/macsemaphore.cpp
+	$(CC) $(CFLAGS) -c ./common/src/macsemaphore.cpp \
+	      -o $(OBJ_TMP_DIR)/macsemaphore.o
+
+decoderconcrete.o :: ./core/src/decoderconcrete.cpp
+	$(CC) $(CFLAGS) -c ./core/src/decoderconcrete.cpp \
+	      -o $(OBJ_TMP_DIR)/decoderconcrete.o
+
+encoderconcrete.o :: ./core/src/encoderconcrete.cpp
+	$(CC) $(CFLAGS) -c ./core/src/encoderconcrete.cpp \
+	      -o $(OBJ_TMP_DIR)/encoderconcrete.o
+
+jobqueue.o :: ./core/src/jobqueue.cpp
+	$(CC) $(CFLAGS) -c ./core/src/jobqueue.cpp \
+	      -o $(OBJ_TMP_DIR)/jobqueue.o
+
+cudainterface.o :: ./cudainterface/src/cudainterface.cpp
+	$(CC) $(CFLAGS) -c ./cudainterface/src/cudainterface.cpp \
+	      -o $(OBJ_TMP_DIR)/cudainterface.o
+
+gpulib.o :: ./cudainterface/src/gpulib.c
+	$(CC) $(CFLAGS) -c ./cudainterface/src/gpulib.c \
+	      -o $(OBJ_TMP_DIR)/gpulib.o
+
+gpufunc.o :: ./cudainterface/src/gpufunc.cu $(CU_DEPS)
+	$(CU) $(CUFLAGS) -c ./cudainterface/src/gpufunc.cu \
+	      -o $(OBJ_TMP_DIR)/gpufunc.o
+
+debugtools.o :: ./tools/src/debugtools.cpp
+	$(CC) $(CFLAGS) -c ./tools/src/debugtools.cpp \
+	      -o $(OBJ_TMP_DIR)/debugtools.o
+		  
+imagesaver.o :: ./tools/src/imagesaver.cpp
+	$(CC) $(CFLAGS) -c ./tools/src/imagesaver.cpp \
+	      -o $(OBJ_TMP_DIR)/imagesaver.o
+		  
+testclock.o :: ./tools/src/testclock.cpp
+	$(CC) $(CFLAGS) -c ./tools/src/testclock.cpp \
+	      -o $(OBJ_TMP_DIR)/testclock.o
+		  
+tiff.o :: ./tools/src/tiff.cpp
+	$(CC) $(CFLAGS) -c ./tools/src/tiff.cpp \
+	      -o $(OBJ_TMP_DIR)/tiff.o
+

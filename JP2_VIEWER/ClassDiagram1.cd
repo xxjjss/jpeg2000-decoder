@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CAboutDlg" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAhBAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>jp2_viewer.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CChildView" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASBIAECIAUoIg2ESlDuYBhFmBDDAIwAQACqBCEwBQQ=</HashCode>
+      <FileName>ChildView.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMainFrame" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAQAAAAAgRAiAAAiDAAAgAAUAAAAIAAABA=</HashCode>
+      <FileName>MainFrm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COptions" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAASEgQAAAAAgAQhRAAABRAAAAAAIAAgKAAAAAAAA=</HashCode>
+      <FileName>Options.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="tag_stru_dec_param" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAQgAAQAQAAAGQAACAiQABAAAAAApAKAAAA=</HashCode>
+      <FileName>bmi_jp2dec.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tag_stru_rect" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABgAACAAQAAAAAAAAA=</HashCode>
+      <FileName>ChildView.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tag_stru_back_channel" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAACAAAAAAACAAAgAAAQAAA=</HashCode>
+      <FileName>ChildView.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="stru_dec_param" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>bmi_jp2dec.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stru_rect" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChildView.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="stru_back_channel" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChildView.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="enum_dec_format" Collapsed="true">
+    <Position X="8.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAJAAAAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>bmi_jp2dec.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="enum_dec_progression" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAQAAAAAAIAAAAQCAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>bmi_jp2dec.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="enum_dec_configuration" Collapsed="true">
+    <Position X="7" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABggAAABAAAACAAAAYAEgAABAAAAAAADgAA=</HashCode>
+      <FileName>bmi_jp2dec.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

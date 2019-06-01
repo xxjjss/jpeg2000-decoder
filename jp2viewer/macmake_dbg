@@ -1,0 +1,53 @@
+BMI_LIBS =
+
+CC = g++
+
+INCLUDES = -I../decoder/common/include -I../decoder/tools/include 
+
+C_OPT = -O0 -Wall -Wno-uninitialized -Wno-deprecated $(BMI_LIBS)
+C_OPT += -msse2 -m32 -DMAC_OS -DMAC_32 
+#C_OPT += -D_FINAL	# release build disable this line
+#C_OPT += -DNDEBUG 	# debug build disable this line
+WARN_FLAGS := \
+	-Wall \
+	-Wno-uninitialized \
+	#-Wimplicit \
+#	-Wswitch \
+#	-Wformat \
+#	-Wchar-subscripts \
+#	-Wparentheses \
+#	-Wmultichar \
+#	-Wtrigraphs \
+#	-Wpointer-arith \
+#	-Wcast-align \
+#	-Wreturn-type \
+#	-Wno-unused-function \
+C_OPT += -msse2 -m32  -DMAC_OS -DMAC_32 $(WARN_FLAGS) 
+
+C_OPT += -D_DEBUG  	# debug build enable this line
+
+C_OPT += -ggdb 
+CFLAGS = $(INCLUDES) $(C_OPT) 
+LIBS = -lm -lpthread # You may comment out "-lpthreads" if coresys was
+                     # built using -DKDU_NO_THREADS
+
+OBJ_TMP_DIR := ../../obj_tmp/jp2viewer
+BIN_DIR = ../../bin
+#LIB_SRC = $(BIN_DIR)/libbmidecoder.so
+LIB_SRC = $(BIN_DIR)/libbmidecoder.a
+CU_LIBS = /usr/local/cuda/lib/libcudart.dylib  /usr/local/cuda/lib/libcublas.dylib
+
+all :: jp2viewer
+
+clean:
+	rm -f $(OBJ_TMP_DIR)/*.o *.so *.a
+
+jp2viewer :: ./jp2viewer.cpp $(LIB_SRC)
+	$(CC) $(CFLAGS) ./jp2viewer.cpp \
+	      -o $(BIN_DIR)/jp2viewer $(LIBS) \
+	      $(LIB_SRC) $(CU_LIBS)
+
+
+#libbmidecoder.so :: $(BIN_DIR)/libbmidecoder.so
+
+#libbmidecoder.a :: $(BIN_DIR)/libbmidecoder.a

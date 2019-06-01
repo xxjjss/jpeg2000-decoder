@@ -1,0 +1,986 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C844EFA41002D5E000D7EF6D /* bmi_jp2dec.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF551002D5E000D7EF6D /* bmi_jp2dec.h */; };
+		C844EFA51002D5E000D7EF6D /* dec_stru.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF561002D5E000D7EF6D /* dec_stru.h */; };
+		C844EFA61002D5E000D7EF6D /* block_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF581002D5E000D7EF6D /* block_decoder.cpp */; };
+		C844EFA71002D5E000D7EF6D /* block_decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF591002D5E000D7EF6D /* block_decoder.h */; };
+		C844EFA81002D5E000D7EF6D /* block_decoder_asm.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF5A1002D5E000D7EF6D /* block_decoder_asm.h */; };
+		C844EFA91002D5E000D7EF6D /* dec_dwt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF5B1002D5E000D7EF6D /* dec_dwt.cpp */; };
+		C844EFAA1002D5E000D7EF6D /* dec_init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF5C1002D5E000D7EF6D /* dec_init.cpp */; };
+		C844EFAB1002D5E000D7EF6D /* dec_io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF5D1002D5E000D7EF6D /* dec_io.cpp */; };
+		C844EFAC1002D5E000D7EF6D /* dec_jp2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF5E1002D5E000D7EF6D /* dec_jp2.cpp */; };
+		C844EFAD1002D5E000D7EF6D /* dec_mq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF5F1002D5E000D7EF6D /* dec_mq.cpp */; };
+		C844EFAE1002D5E000D7EF6D /* dec_packet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF601002D5E000D7EF6D /* dec_packet.cpp */; };
+		C844EFAF1002D5E000D7EF6D /* dec_platform.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF611002D5E000D7EF6D /* dec_platform.h */; };
+		C844EFB01002D5E000D7EF6D /* dec_syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF621002D5E000D7EF6D /* dec_syntax.cpp */; };
+		C844EFB11002D5E000D7EF6D /* dec_t1.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF631002D5E000D7EF6D /* dec_t1.h */; };
+		C844EFB21002D5E000D7EF6D /* dec_t1_comp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF641002D5E000D7EF6D /* dec_t1_comp.cpp */; };
+		C844EFB31002D5E000D7EF6D /* dec_t1_pass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF651002D5E000D7EF6D /* dec_t1_pass.cpp */; };
+		C844EFB41002D5E000D7EF6D /* dec_tagtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF661002D5E000D7EF6D /* dec_tagtree.cpp */; };
+		C844EFB51002D5E000D7EF6D /* dec_tsk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF671002D5E000D7EF6D /* dec_tsk.cpp */; };
+		C844EFB71002D5E000D7EF6D /* mq_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF691002D5E000D7EF6D /* mq_decoder.cpp */; };
+		C844EFB81002D5E000D7EF6D /* debug.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF6C1002D5E000D7EF6D /* debug.h */; };
+		C844EFB91002D5E000D7EF6D /* decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF6D1002D5E000D7EF6D /* decoder.h */; };
+		C844EFBA1002D5E000D7EF6D /* macsemaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF6E1002D5E000D7EF6D /* macsemaphore.h */; };
+		C844EFBB1002D5E000D7EF6D /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF6F1002D5E000D7EF6D /* platform.h */; };
+		C844EFBC1002D5E000D7EF6D /* decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF711002D5E000D7EF6D /* decoder.cpp */; };
+		C844EFBD1002D5E000D7EF6D /* macsemaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF721002D5E000D7EF6D /* macsemaphore.cpp */; };
+		C844EFBE1002D5E000D7EF6D /* decoderconcrete.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF751002D5E000D7EF6D /* decoderconcrete.h */; };
+		C844EFBF1002D5E000D7EF6D /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF761002D5E000D7EF6D /* threads.h */; };
+		C844EFC01002D5E000D7EF6D /* decoderconcrete.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF781002D5E000D7EF6D /* decoderconcrete.cpp */; };
+		C844EFC11002D5E000D7EF6D /* bmicuda.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF7B1002D5E000D7EF6D /* bmicuda.h */; };
+		C844EFC21002D5E000D7EF6D /* cudaInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF7C1002D5E000D7EF6D /* cudaInterface.h */; };
+		C844EFC31002D5E000D7EF6D /* cudainterfacedatatype.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF7D1002D5E000D7EF6D /* cudainterfacedatatype.h */; };
+		C844EFC41002D5E000D7EF6D /* gpulib.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF7E1002D5E000D7EF6D /* gpulib.h */; };
+		C844EFC61002D5E000D7EF6D /* cudainterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EF811002D5E000D7EF6D /* cudainterface.cpp */; };
+		C844EFC71002D5E000D7EF6D /* gpufunc.cu in Sources */ = {isa = PBXBuildFile; fileRef = C844EF821002D5E000D7EF6D /* gpufunc.cu */; };
+		C844EFC81002D5E000D7EF6D /* gpufunc.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF831002D5E000D7EF6D /* gpufunc.h */; };
+		C844EFC91002D5E000D7EF6D /* gpulib.c in Sources */ = {isa = PBXBuildFile; fileRef = C844EF841002D5E000D7EF6D /* gpulib.c */; };
+		C844EFD71002D5E000D7EF6D /* decoder_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C844EF921002D5E000D7EF6D /* decoder_Prefix.pch */; };
+		C844EFDE1002D5E000D7EF6D /* debugtools.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF9D1002D5E000D7EF6D /* debugtools.h */; };
+		C844EFE01002D5E000D7EF6D /* testclock.h in Headers */ = {isa = PBXBuildFile; fileRef = C844EF9F1002D5E000D7EF6D /* testclock.h */; };
+		C844EFE11002D5E000D7EF6D /* debugtools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EFA11002D5E000D7EF6D /* debugtools.cpp */; };
+		C844EFE21002D5E000D7EF6D /* testclock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844EFA21002D5E000D7EF6D /* testclock.cpp */; };
+		C844F0111003D77200D7EF6D /* singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = C844F0101003D77200D7EF6D /* singleton.h */; };
+		C844F0131003D7A800D7EF6D /* bmi_dwt_gpu_kernel.h in Headers */ = {isa = PBXBuildFile; fileRef = C844F0121003D7A800D7EF6D /* bmi_dwt_gpu_kernel.h */; };
+		C844F0AD1003FE1100D7EF6D /* jp2viewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844F0AA1003FE1100D7EF6D /* jp2viewer.cpp */; };
+		C844F14310040A4500D7EF6D /* batchdecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C844F13F10040A4500D7EF6D /* batchdecode.cpp */; };
+		C89D250D1020AE5700095B1D /* block_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D24F81020AE5700095B1D /* block_decoder.cpp */; };
+		C89D250E1020AE5700095B1D /* bmi_block_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D24FB1020AE5700095B1D /* bmi_block_decoder.cpp */; };
+		C89D250F1020AE5700095B1D /* bmi_mq_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D24FD1020AE5700095B1D /* bmi_mq_decoder.cpp */; };
+		C89D25101020AE5700095B1D /* dec_dwt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D24FF1020AE5700095B1D /* dec_dwt.cpp */; };
+		C89D25111020AE5700095B1D /* dec_init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25001020AE5700095B1D /* dec_init.cpp */; };
+		C89D25121020AE5700095B1D /* dec_io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25011020AE5700095B1D /* dec_io.cpp */; };
+		C89D25131020AE5700095B1D /* dec_jp2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25021020AE5700095B1D /* dec_jp2.cpp */; };
+		C89D25141020AE5700095B1D /* dec_mq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25031020AE5700095B1D /* dec_mq.cpp */; };
+		C89D25151020AE5700095B1D /* dec_packet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25041020AE5700095B1D /* dec_packet.cpp */; };
+		C89D25161020AE5700095B1D /* dec_syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25061020AE5700095B1D /* dec_syntax.cpp */; };
+		C89D25171020AE5700095B1D /* dec_t1_comp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25081020AE5700095B1D /* dec_t1_comp.cpp */; };
+		C89D25181020AE5700095B1D /* dec_t1_pass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25091020AE5700095B1D /* dec_t1_pass.cpp */; };
+		C89D25191020AE5700095B1D /* dec_tagtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D250A1020AE5700095B1D /* dec_tagtree.cpp */; };
+		C89D251A1020AE5700095B1D /* dec_tsk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D250B1020AE5700095B1D /* dec_tsk.cpp */; };
+		C89D251B1020AE5700095B1D /* mq_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D250C1020AE5700095B1D /* mq_decoder.cpp */; };
+		C89D25321020AE7300095B1D /* block_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D251D1020AE7300095B1D /* block_decoder.cpp */; };
+		C89D25331020AE7300095B1D /* block_decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C89D251E1020AE7300095B1D /* block_decoder.h */; };
+		C89D25341020AE7300095B1D /* block_decoder_asm.h in Headers */ = {isa = PBXBuildFile; fileRef = C89D251F1020AE7300095B1D /* block_decoder_asm.h */; };
+		C89D25351020AE7300095B1D /* bmi_block_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25201020AE7300095B1D /* bmi_block_decoder.cpp */; };
+		C89D25361020AE7300095B1D /* bmi_block_decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C89D25211020AE7300095B1D /* bmi_block_decoder.h */; };
+		C89D25371020AE7300095B1D /* bmi_mq_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25221020AE7300095B1D /* bmi_mq_decoder.cpp */; };
+		C89D25381020AE7300095B1D /* bmi_mq_decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C89D25231020AE7300095B1D /* bmi_mq_decoder.h */; };
+		C89D25391020AE7300095B1D /* dec_dwt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25241020AE7300095B1D /* dec_dwt.cpp */; };
+		C89D253A1020AE7300095B1D /* dec_init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25251020AE7300095B1D /* dec_init.cpp */; };
+		C89D253B1020AE7300095B1D /* dec_io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25261020AE7300095B1D /* dec_io.cpp */; };
+		C89D253C1020AE7300095B1D /* dec_jp2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25271020AE7300095B1D /* dec_jp2.cpp */; };
+		C89D253D1020AE7300095B1D /* dec_mq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25281020AE7300095B1D /* dec_mq.cpp */; };
+		C89D253E1020AE7300095B1D /* dec_packet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25291020AE7300095B1D /* dec_packet.cpp */; };
+		C89D253F1020AE7300095B1D /* dec_platform.h in Headers */ = {isa = PBXBuildFile; fileRef = C89D252A1020AE7300095B1D /* dec_platform.h */; };
+		C89D25401020AE7300095B1D /* dec_syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D252B1020AE7300095B1D /* dec_syntax.cpp */; };
+		C89D25411020AE7300095B1D /* dec_t1.h in Headers */ = {isa = PBXBuildFile; fileRef = C89D252C1020AE7300095B1D /* dec_t1.h */; };
+		C89D25421020AE7300095B1D /* dec_t1_comp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D252D1020AE7300095B1D /* dec_t1_comp.cpp */; };
+		C89D25431020AE7300095B1D /* dec_t1_pass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D252E1020AE7300095B1D /* dec_t1_pass.cpp */; };
+		C89D25441020AE7300095B1D /* dec_tagtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D252F1020AE7300095B1D /* dec_tagtree.cpp */; };
+		C89D25451020AE7300095B1D /* dec_tsk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25301020AE7300095B1D /* dec_tsk.cpp */; };
+		C89D25461020AE7300095B1D /* mq_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C89D25311020AE7300095B1D /* mq_decoder.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C844EEE01002D54000D7EF6D /* libdecoder.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libdecoder.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C844EF551002D5E000D7EF6D /* bmi_jp2dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmi_jp2dec.h; sourceTree = "<group>"; };
+		C844EF561002D5E000D7EF6D /* dec_stru.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_stru.h; sourceTree = "<group>"; };
+		C844EF581002D5E000D7EF6D /* block_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = block_decoder.cpp; sourceTree = "<group>"; };
+		C844EF591002D5E000D7EF6D /* block_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = block_decoder.h; sourceTree = "<group>"; };
+		C844EF5A1002D5E000D7EF6D /* block_decoder_asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = block_decoder_asm.h; sourceTree = "<group>"; };
+		C844EF5B1002D5E000D7EF6D /* dec_dwt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_dwt.cpp; sourceTree = "<group>"; };
+		C844EF5C1002D5E000D7EF6D /* dec_init.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_init.cpp; sourceTree = "<group>"; };
+		C844EF5D1002D5E000D7EF6D /* dec_io.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_io.cpp; sourceTree = "<group>"; };
+		C844EF5E1002D5E000D7EF6D /* dec_jp2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_jp2.cpp; sourceTree = "<group>"; };
+		C844EF5F1002D5E000D7EF6D /* dec_mq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_mq.cpp; sourceTree = "<group>"; };
+		C844EF601002D5E000D7EF6D /* dec_packet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_packet.cpp; sourceTree = "<group>"; };
+		C844EF611002D5E000D7EF6D /* dec_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_platform.h; sourceTree = "<group>"; };
+		C844EF621002D5E000D7EF6D /* dec_syntax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_syntax.cpp; sourceTree = "<group>"; };
+		C844EF631002D5E000D7EF6D /* dec_t1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_t1.h; sourceTree = "<group>"; };
+		C844EF641002D5E000D7EF6D /* dec_t1_comp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_t1_comp.cpp; sourceTree = "<group>"; };
+		C844EF651002D5E000D7EF6D /* dec_t1_pass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_t1_pass.cpp; sourceTree = "<group>"; };
+		C844EF661002D5E000D7EF6D /* dec_tagtree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_tagtree.cpp; sourceTree = "<group>"; };
+		C844EF671002D5E000D7EF6D /* dec_tsk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_tsk.cpp; sourceTree = "<group>"; };
+		C844EF691002D5E000D7EF6D /* mq_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mq_decoder.cpp; sourceTree = "<group>"; };
+		C844EF6C1002D5E000D7EF6D /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		C844EF6D1002D5E000D7EF6D /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoder.h; sourceTree = "<group>"; };
+		C844EF6E1002D5E000D7EF6D /* macsemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macsemaphore.h; sourceTree = "<group>"; };
+		C844EF6F1002D5E000D7EF6D /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		C844EF711002D5E000D7EF6D /* decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = decoder.cpp; sourceTree = "<group>"; };
+		C844EF721002D5E000D7EF6D /* macsemaphore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = macsemaphore.cpp; sourceTree = "<group>"; };
+		C844EF751002D5E000D7EF6D /* decoderconcrete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoderconcrete.h; sourceTree = "<group>"; };
+		C844EF761002D5E000D7EF6D /* threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threads.h; sourceTree = "<group>"; };
+		C844EF781002D5E000D7EF6D /* decoderconcrete.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = decoderconcrete.cpp; sourceTree = "<group>"; };
+		C844EF7B1002D5E000D7EF6D /* bmicuda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmicuda.h; sourceTree = "<group>"; };
+		C844EF7C1002D5E000D7EF6D /* cudaInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cudaInterface.h; sourceTree = "<group>"; };
+		C844EF7D1002D5E000D7EF6D /* cudainterfacedatatype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cudainterfacedatatype.h; sourceTree = "<group>"; };
+		C844EF7E1002D5E000D7EF6D /* gpulib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpulib.h; sourceTree = "<group>"; };
+		C844EF811002D5E000D7EF6D /* cudainterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cudainterface.cpp; sourceTree = "<group>"; };
+		C844EF821002D5E000D7EF6D /* gpufunc.cu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cuda; path = gpufunc.cu; sourceTree = "<group>"; };
+		C844EF831002D5E000D7EF6D /* gpufunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gpufunc.h; sourceTree = "<group>"; };
+		C844EF841002D5E000D7EF6D /* gpulib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gpulib.c; sourceTree = "<group>"; };
+		C844EF921002D5E000D7EF6D /* decoder_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoder_Prefix.pch; sourceTree = "<group>"; };
+		C844EF941002D5E000D7EF6D /* gpufunc.linkinfo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gpufunc.linkinfo; sourceTree = "<group>"; };
+		C844EF971002D5E000D7EF6D /* macmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = macmake; sourceTree = "<group>"; };
+		C844EF9D1002D5E000D7EF6D /* debugtools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debugtools.h; sourceTree = "<group>"; };
+		C844EF9F1002D5E000D7EF6D /* testclock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testclock.h; sourceTree = "<group>"; };
+		C844EFA11002D5E000D7EF6D /* debugtools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = debugtools.cpp; sourceTree = "<group>"; };
+		C844EFA21002D5E000D7EF6D /* testclock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testclock.cpp; sourceTree = "<group>"; };
+		C844F0101003D77200D7EF6D /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = singleton.h; path = tools/include/singleton.h; sourceTree = "<group>"; };
+		C844F0121003D7A800D7EF6D /* bmi_dwt_gpu_kernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bmi_dwt_gpu_kernel.h; path = cudainterface/src/bmi_dwt_gpu_kernel.h; sourceTree = "<group>"; };
+		C844F0A31003FE0100D7EF6D /* jp2viewer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jp2viewer; sourceTree = BUILT_PRODUCTS_DIR; };
+		C844F0AA1003FE1100D7EF6D /* jp2viewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jp2viewer.cpp; sourceTree = "<group>"; };
+		C844F0AB1003FE1100D7EF6D /* jp2viewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp2viewer.h; sourceTree = "<group>"; };
+		C844F13910040A0B00D7EF6D /* batchdecode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = batchdecode; sourceTree = BUILT_PRODUCTS_DIR; };
+		C844F13F10040A4500D7EF6D /* batchdecode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = batchdecode.cpp; sourceTree = "<group>"; };
+		C89D24F51020AE5700095B1D /* bmi_jp2dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmi_jp2dec.h; sourceTree = "<group>"; };
+		C89D24F61020AE5700095B1D /* dec_stru.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_stru.h; sourceTree = "<group>"; };
+		C89D24F81020AE5700095B1D /* block_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = block_decoder.cpp; sourceTree = "<group>"; };
+		C89D24F91020AE5700095B1D /* block_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = block_decoder.h; sourceTree = "<group>"; };
+		C89D24FA1020AE5700095B1D /* block_decoder_asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = block_decoder_asm.h; sourceTree = "<group>"; };
+		C89D24FB1020AE5700095B1D /* bmi_block_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bmi_block_decoder.cpp; sourceTree = "<group>"; };
+		C89D24FC1020AE5700095B1D /* bmi_block_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmi_block_decoder.h; sourceTree = "<group>"; };
+		C89D24FD1020AE5700095B1D /* bmi_mq_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bmi_mq_decoder.cpp; sourceTree = "<group>"; };
+		C89D24FE1020AE5700095B1D /* bmi_mq_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmi_mq_decoder.h; sourceTree = "<group>"; };
+		C89D24FF1020AE5700095B1D /* dec_dwt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_dwt.cpp; sourceTree = "<group>"; };
+		C89D25001020AE5700095B1D /* dec_init.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_init.cpp; sourceTree = "<group>"; };
+		C89D25011020AE5700095B1D /* dec_io.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_io.cpp; sourceTree = "<group>"; };
+		C89D25021020AE5700095B1D /* dec_jp2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_jp2.cpp; sourceTree = "<group>"; };
+		C89D25031020AE5700095B1D /* dec_mq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_mq.cpp; sourceTree = "<group>"; };
+		C89D25041020AE5700095B1D /* dec_packet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_packet.cpp; sourceTree = "<group>"; };
+		C89D25051020AE5700095B1D /* dec_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_platform.h; sourceTree = "<group>"; };
+		C89D25061020AE5700095B1D /* dec_syntax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_syntax.cpp; sourceTree = "<group>"; };
+		C89D25071020AE5700095B1D /* dec_t1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_t1.h; sourceTree = "<group>"; };
+		C89D25081020AE5700095B1D /* dec_t1_comp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_t1_comp.cpp; sourceTree = "<group>"; };
+		C89D25091020AE5700095B1D /* dec_t1_pass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_t1_pass.cpp; sourceTree = "<group>"; };
+		C89D250A1020AE5700095B1D /* dec_tagtree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_tagtree.cpp; sourceTree = "<group>"; };
+		C89D250B1020AE5700095B1D /* dec_tsk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_tsk.cpp; sourceTree = "<group>"; };
+		C89D250C1020AE5700095B1D /* mq_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mq_decoder.cpp; sourceTree = "<group>"; };
+		C89D251D1020AE7300095B1D /* block_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = block_decoder.cpp; sourceTree = "<group>"; };
+		C89D251E1020AE7300095B1D /* block_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = block_decoder.h; sourceTree = "<group>"; };
+		C89D251F1020AE7300095B1D /* block_decoder_asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = block_decoder_asm.h; sourceTree = "<group>"; };
+		C89D25201020AE7300095B1D /* bmi_block_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bmi_block_decoder.cpp; sourceTree = "<group>"; };
+		C89D25211020AE7300095B1D /* bmi_block_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmi_block_decoder.h; sourceTree = "<group>"; };
+		C89D25221020AE7300095B1D /* bmi_mq_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bmi_mq_decoder.cpp; sourceTree = "<group>"; };
+		C89D25231020AE7300095B1D /* bmi_mq_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmi_mq_decoder.h; sourceTree = "<group>"; };
+		C89D25241020AE7300095B1D /* dec_dwt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_dwt.cpp; sourceTree = "<group>"; };
+		C89D25251020AE7300095B1D /* dec_init.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_init.cpp; sourceTree = "<group>"; };
+		C89D25261020AE7300095B1D /* dec_io.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_io.cpp; sourceTree = "<group>"; };
+		C89D25271020AE7300095B1D /* dec_jp2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_jp2.cpp; sourceTree = "<group>"; };
+		C89D25281020AE7300095B1D /* dec_mq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_mq.cpp; sourceTree = "<group>"; };
+		C89D25291020AE7300095B1D /* dec_packet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_packet.cpp; sourceTree = "<group>"; };
+		C89D252A1020AE7300095B1D /* dec_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_platform.h; sourceTree = "<group>"; };
+		C89D252B1020AE7300095B1D /* dec_syntax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_syntax.cpp; sourceTree = "<group>"; };
+		C89D252C1020AE7300095B1D /* dec_t1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_t1.h; sourceTree = "<group>"; };
+		C89D252D1020AE7300095B1D /* dec_t1_comp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_t1_comp.cpp; sourceTree = "<group>"; };
+		C89D252E1020AE7300095B1D /* dec_t1_pass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_t1_pass.cpp; sourceTree = "<group>"; };
+		C89D252F1020AE7300095B1D /* dec_tagtree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_tagtree.cpp; sourceTree = "<group>"; };
+		C89D25301020AE7300095B1D /* dec_tsk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dec_tsk.cpp; sourceTree = "<group>"; };
+		C89D25311020AE7300095B1D /* mq_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mq_decoder.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C844EEDE1002D54000D7EF6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C844F0A11003FE0100D7EF6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C844F13710040A0B00D7EF6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0867D691FE84028FC02AAC07 /* decoder */ = {
+			isa = PBXGroup;
+			children = (
+				C844F13E10040A4500D7EF6D /* batchdecode */,
+				C844F0A71003FE1100D7EF6D /* jp2viewer */,
+				C844EEE01002D54000D7EF6D /* libdecoder.dylib */,
+				C844EF511002D5E000D7EF6D /* decoder */,
+				C844F0A31003FE0100D7EF6D /* jp2viewer */,
+				C844F13910040A0B00D7EF6D /* batchdecode */,
+			);
+			name = decoder;
+			sourceTree = "<group>";
+		};
+		C844EF511002D5E000D7EF6D /* decoder */ = {
+			isa = PBXGroup;
+			children = (
+				C89D251C1020AE7300095B1D /* src */,
+				C89D24F31020AE5700095B1D /* codec */,
+				C844F0121003D7A800D7EF6D /* bmi_dwt_gpu_kernel.h */,
+				C844F0101003D77200D7EF6D /* singleton.h */,
+				C844EF531002D5E000D7EF6D /* codec */,
+				C844EF6A1002D5E000D7EF6D /* common */,
+				C844EF731002D5E000D7EF6D /* core */,
+				C844EF791002D5E000D7EF6D /* cudainterface */,
+				C844EF921002D5E000D7EF6D /* decoder_Prefix.pch */,
+				C844EF941002D5E000D7EF6D /* gpufunc.linkinfo */,
+				C844EF971002D5E000D7EF6D /* macmake */,
+				C844EF9B1002D5E000D7EF6D /* tools */,
+			);
+			path = decoder;
+			sourceTree = "<group>";
+		};
+		C844EF531002D5E000D7EF6D /* codec */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF541002D5E000D7EF6D /* include */,
+				C844EF571002D5E000D7EF6D /* src */,
+			);
+			path = codec;
+			sourceTree = "<group>";
+		};
+		C844EF541002D5E000D7EF6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF551002D5E000D7EF6D /* bmi_jp2dec.h */,
+				C844EF561002D5E000D7EF6D /* dec_stru.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C844EF571002D5E000D7EF6D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF581002D5E000D7EF6D /* block_decoder.cpp */,
+				C844EF591002D5E000D7EF6D /* block_decoder.h */,
+				C844EF5A1002D5E000D7EF6D /* block_decoder_asm.h */,
+				C844EF5B1002D5E000D7EF6D /* dec_dwt.cpp */,
+				C844EF5C1002D5E000D7EF6D /* dec_init.cpp */,
+				C844EF5D1002D5E000D7EF6D /* dec_io.cpp */,
+				C844EF5E1002D5E000D7EF6D /* dec_jp2.cpp */,
+				C844EF5F1002D5E000D7EF6D /* dec_mq.cpp */,
+				C844EF601002D5E000D7EF6D /* dec_packet.cpp */,
+				C844EF611002D5E000D7EF6D /* dec_platform.h */,
+				C844EF621002D5E000D7EF6D /* dec_syntax.cpp */,
+				C844EF631002D5E000D7EF6D /* dec_t1.h */,
+				C844EF641002D5E000D7EF6D /* dec_t1_comp.cpp */,
+				C844EF651002D5E000D7EF6D /* dec_t1_pass.cpp */,
+				C844EF661002D5E000D7EF6D /* dec_tagtree.cpp */,
+				C844EF671002D5E000D7EF6D /* dec_tsk.cpp */,
+				C844EF691002D5E000D7EF6D /* mq_decoder.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C844EF6A1002D5E000D7EF6D /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF6B1002D5E000D7EF6D /* include */,
+				C844EF701002D5E000D7EF6D /* src */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		C844EF6B1002D5E000D7EF6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF6C1002D5E000D7EF6D /* debug.h */,
+				C844EF6D1002D5E000D7EF6D /* decoder.h */,
+				C844EF6E1002D5E000D7EF6D /* macsemaphore.h */,
+				C844EF6F1002D5E000D7EF6D /* platform.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C844EF701002D5E000D7EF6D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF711002D5E000D7EF6D /* decoder.cpp */,
+				C844EF721002D5E000D7EF6D /* macsemaphore.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C844EF731002D5E000D7EF6D /* core */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF741002D5E000D7EF6D /* include */,
+				C844EF771002D5E000D7EF6D /* src */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		C844EF741002D5E000D7EF6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF751002D5E000D7EF6D /* decoderconcrete.h */,
+				C844EF761002D5E000D7EF6D /* threads.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C844EF771002D5E000D7EF6D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF781002D5E000D7EF6D /* decoderconcrete.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C844EF791002D5E000D7EF6D /* cudainterface */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF7A1002D5E000D7EF6D /* include */,
+				C844EF7F1002D5E000D7EF6D /* src */,
+			);
+			path = cudainterface;
+			sourceTree = "<group>";
+		};
+		C844EF7A1002D5E000D7EF6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF7B1002D5E000D7EF6D /* bmicuda.h */,
+				C844EF7C1002D5E000D7EF6D /* cudaInterface.h */,
+				C844EF7D1002D5E000D7EF6D /* cudainterfacedatatype.h */,
+				C844EF7E1002D5E000D7EF6D /* gpulib.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C844EF7F1002D5E000D7EF6D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF811002D5E000D7EF6D /* cudainterface.cpp */,
+				C844EF821002D5E000D7EF6D /* gpufunc.cu */,
+				C844EF831002D5E000D7EF6D /* gpufunc.h */,
+				C844EF841002D5E000D7EF6D /* gpulib.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C844EF9B1002D5E000D7EF6D /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF9C1002D5E000D7EF6D /* include */,
+				C844EFA01002D5E000D7EF6D /* src */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		C844EF9C1002D5E000D7EF6D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C844EF9D1002D5E000D7EF6D /* debugtools.h */,
+				C844EF9F1002D5E000D7EF6D /* testclock.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C844EFA01002D5E000D7EF6D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C844EFA11002D5E000D7EF6D /* debugtools.cpp */,
+				C844EFA21002D5E000D7EF6D /* testclock.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C844F0A71003FE1100D7EF6D /* jp2viewer */ = {
+			isa = PBXGroup;
+			children = (
+				C844F0AA1003FE1100D7EF6D /* jp2viewer.cpp */,
+				C844F0AB1003FE1100D7EF6D /* jp2viewer.h */,
+			);
+			path = jp2viewer;
+			sourceTree = "<group>";
+		};
+		C844F13E10040A4500D7EF6D /* batchdecode */ = {
+			isa = PBXGroup;
+			children = (
+				C844F13F10040A4500D7EF6D /* batchdecode.cpp */,
+			);
+			path = batchdecode;
+			sourceTree = "<group>";
+		};
+		C89D24F31020AE5700095B1D /* codec */ = {
+			isa = PBXGroup;
+			children = (
+				C89D24F41020AE5700095B1D /* include */,
+				C89D24F71020AE5700095B1D /* src */,
+			);
+			path = codec;
+			sourceTree = "<group>";
+		};
+		C89D24F41020AE5700095B1D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C89D24F51020AE5700095B1D /* bmi_jp2dec.h */,
+				C89D24F61020AE5700095B1D /* dec_stru.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C89D24F71020AE5700095B1D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C89D24F81020AE5700095B1D /* block_decoder.cpp */,
+				C89D24F91020AE5700095B1D /* block_decoder.h */,
+				C89D24FA1020AE5700095B1D /* block_decoder_asm.h */,
+				C89D24FB1020AE5700095B1D /* bmi_block_decoder.cpp */,
+				C89D24FC1020AE5700095B1D /* bmi_block_decoder.h */,
+				C89D24FD1020AE5700095B1D /* bmi_mq_decoder.cpp */,
+				C89D24FE1020AE5700095B1D /* bmi_mq_decoder.h */,
+				C89D24FF1020AE5700095B1D /* dec_dwt.cpp */,
+				C89D25001020AE5700095B1D /* dec_init.cpp */,
+				C89D25011020AE5700095B1D /* dec_io.cpp */,
+				C89D25021020AE5700095B1D /* dec_jp2.cpp */,
+				C89D25031020AE5700095B1D /* dec_mq.cpp */,
+				C89D25041020AE5700095B1D /* dec_packet.cpp */,
+				C89D25051020AE5700095B1D /* dec_platform.h */,
+				C89D25061020AE5700095B1D /* dec_syntax.cpp */,
+				C89D25071020AE5700095B1D /* dec_t1.h */,
+				C89D25081020AE5700095B1D /* dec_t1_comp.cpp */,
+				C89D25091020AE5700095B1D /* dec_t1_pass.cpp */,
+				C89D250A1020AE5700095B1D /* dec_tagtree.cpp */,
+				C89D250B1020AE5700095B1D /* dec_tsk.cpp */,
+				C89D250C1020AE5700095B1D /* mq_decoder.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C89D251C1020AE7300095B1D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C89D251D1020AE7300095B1D /* block_decoder.cpp */,
+				C89D251E1020AE7300095B1D /* block_decoder.h */,
+				C89D251F1020AE7300095B1D /* block_decoder_asm.h */,
+				C89D25201020AE7300095B1D /* bmi_block_decoder.cpp */,
+				C89D25211020AE7300095B1D /* bmi_block_decoder.h */,
+				C89D25221020AE7300095B1D /* bmi_mq_decoder.cpp */,
+				C89D25231020AE7300095B1D /* bmi_mq_decoder.h */,
+				C89D25241020AE7300095B1D /* dec_dwt.cpp */,
+				C89D25251020AE7300095B1D /* dec_init.cpp */,
+				C89D25261020AE7300095B1D /* dec_io.cpp */,
+				C89D25271020AE7300095B1D /* dec_jp2.cpp */,
+				C89D25281020AE7300095B1D /* dec_mq.cpp */,
+				C89D25291020AE7300095B1D /* dec_packet.cpp */,
+				C89D252A1020AE7300095B1D /* dec_platform.h */,
+				C89D252B1020AE7300095B1D /* dec_syntax.cpp */,
+				C89D252C1020AE7300095B1D /* dec_t1.h */,
+				C89D252D1020AE7300095B1D /* dec_t1_comp.cpp */,
+				C89D252E1020AE7300095B1D /* dec_t1_pass.cpp */,
+				C89D252F1020AE7300095B1D /* dec_tagtree.cpp */,
+				C89D25301020AE7300095B1D /* dec_tsk.cpp */,
+				C89D25311020AE7300095B1D /* mq_decoder.cpp */,
+			);
+			name = src;
+			path = codec/src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C844EEDC1002D54000D7EF6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C844EFA41002D5E000D7EF6D /* bmi_jp2dec.h in Headers */,
+				C844EFA51002D5E000D7EF6D /* dec_stru.h in Headers */,
+				C844EFA71002D5E000D7EF6D /* block_decoder.h in Headers */,
+				C844EFA81002D5E000D7EF6D /* block_decoder_asm.h in Headers */,
+				C844EFAF1002D5E000D7EF6D /* dec_platform.h in Headers */,
+				C844EFB11002D5E000D7EF6D /* dec_t1.h in Headers */,
+				C844EFB81002D5E000D7EF6D /* debug.h in Headers */,
+				C844EFB91002D5E000D7EF6D /* decoder.h in Headers */,
+				C844EFBA1002D5E000D7EF6D /* macsemaphore.h in Headers */,
+				C844EFBB1002D5E000D7EF6D /* platform.h in Headers */,
+				C844EFBE1002D5E000D7EF6D /* decoderconcrete.h in Headers */,
+				C844EFBF1002D5E000D7EF6D /* threads.h in Headers */,
+				C844EFC11002D5E000D7EF6D /* bmicuda.h in Headers */,
+				C844EFC21002D5E000D7EF6D /* cudaInterface.h in Headers */,
+				C844EFC31002D5E000D7EF6D /* cudainterfacedatatype.h in Headers */,
+				C844EFC41002D5E000D7EF6D /* gpulib.h in Headers */,
+				C844EFC81002D5E000D7EF6D /* gpufunc.h in Headers */,
+				C844EFD71002D5E000D7EF6D /* decoder_Prefix.pch in Headers */,
+				C844EFDE1002D5E000D7EF6D /* debugtools.h in Headers */,
+				C844EFE01002D5E000D7EF6D /* testclock.h in Headers */,
+				C844F0111003D77200D7EF6D /* singleton.h in Headers */,
+				C844F0131003D7A800D7EF6D /* bmi_dwt_gpu_kernel.h in Headers */,
+				C89D25331020AE7300095B1D /* block_decoder.h in Headers */,
+				C89D25341020AE7300095B1D /* block_decoder_asm.h in Headers */,
+				C89D25361020AE7300095B1D /* bmi_block_decoder.h in Headers */,
+				C89D25381020AE7300095B1D /* bmi_mq_decoder.h in Headers */,
+				C89D253F1020AE7300095B1D /* dec_platform.h in Headers */,
+				C89D25411020AE7300095B1D /* dec_t1.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C844EEDF1002D54000D7EF6D /* decoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C844EEE31002D55F00D7EF6D /* Build configuration list for PBXNativeTarget "decoder" */;
+			buildPhases = (
+				C844EEDC1002D54000D7EF6D /* Headers */,
+				C844EEDD1002D54000D7EF6D /* Sources */,
+				C844EEDE1002D54000D7EF6D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = decoder;
+			productName = decoder;
+			productReference = C844EEE01002D54000D7EF6D /* libdecoder.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		C844F0A21003FE0100D7EF6D /* jp2viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C844F0AE1003FE1200D7EF6D /* Build configuration list for PBXNativeTarget "jp2viewer" */;
+			buildPhases = (
+				C844F0A01003FE0100D7EF6D /* Sources */,
+				C844F0A11003FE0100D7EF6D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jp2viewer;
+			productName = jp2viewer;
+			productReference = C844F0A31003FE0100D7EF6D /* jp2viewer */;
+			productType = "com.apple.product-type.tool";
+		};
+		C844F13810040A0B00D7EF6D /* batchdecode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C844F13D10040A2A00D7EF6D /* Build configuration list for PBXNativeTarget "batchdecode" */;
+			buildPhases = (
+				C844F13610040A0B00D7EF6D /* Sources */,
+				C844F13710040A0B00D7EF6D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = batchdecode;
+			productName = batchdecode;
+			productReference = C844F13910040A0B00D7EF6D /* batchdecode */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB916408733D950010E9CD /* Build configuration list for PBXProject "decoder" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* decoder */;
+			productRefGroup = 0867D691FE84028FC02AAC07 /* decoder */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C844EEDF1002D54000D7EF6D /* decoder */,
+				C844F0A21003FE0100D7EF6D /* jp2viewer */,
+				C844F13810040A0B00D7EF6D /* batchdecode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C844EEDD1002D54000D7EF6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C844EFA61002D5E000D7EF6D /* block_decoder.cpp in Sources */,
+				C844EFA91002D5E000D7EF6D /* dec_dwt.cpp in Sources */,
+				C844EFAA1002D5E000D7EF6D /* dec_init.cpp in Sources */,
+				C844EFAB1002D5E000D7EF6D /* dec_io.cpp in Sources */,
+				C844EFAC1002D5E000D7EF6D /* dec_jp2.cpp in Sources */,
+				C844EFAD1002D5E000D7EF6D /* dec_mq.cpp in Sources */,
+				C844EFAE1002D5E000D7EF6D /* dec_packet.cpp in Sources */,
+				C844EFB01002D5E000D7EF6D /* dec_syntax.cpp in Sources */,
+				C844EFB21002D5E000D7EF6D /* dec_t1_comp.cpp in Sources */,
+				C844EFB31002D5E000D7EF6D /* dec_t1_pass.cpp in Sources */,
+				C844EFB41002D5E000D7EF6D /* dec_tagtree.cpp in Sources */,
+				C844EFB51002D5E000D7EF6D /* dec_tsk.cpp in Sources */,
+				C844EFB71002D5E000D7EF6D /* mq_decoder.cpp in Sources */,
+				C844EFBC1002D5E000D7EF6D /* decoder.cpp in Sources */,
+				C844EFBD1002D5E000D7EF6D /* macsemaphore.cpp in Sources */,
+				C844EFC01002D5E000D7EF6D /* decoderconcrete.cpp in Sources */,
+				C844EFC61002D5E000D7EF6D /* cudainterface.cpp in Sources */,
+				C844EFC71002D5E000D7EF6D /* gpufunc.cu in Sources */,
+				C844EFC91002D5E000D7EF6D /* gpulib.c in Sources */,
+				C844EFE11002D5E000D7EF6D /* debugtools.cpp in Sources */,
+				C844EFE21002D5E000D7EF6D /* testclock.cpp in Sources */,
+				C89D25321020AE7300095B1D /* block_decoder.cpp in Sources */,
+				C89D25351020AE7300095B1D /* bmi_block_decoder.cpp in Sources */,
+				C89D25371020AE7300095B1D /* bmi_mq_decoder.cpp in Sources */,
+				C89D25391020AE7300095B1D /* dec_dwt.cpp in Sources */,
+				C89D253A1020AE7300095B1D /* dec_init.cpp in Sources */,
+				C89D253B1020AE7300095B1D /* dec_io.cpp in Sources */,
+				C89D253C1020AE7300095B1D /* dec_jp2.cpp in Sources */,
+				C89D253D1020AE7300095B1D /* dec_mq.cpp in Sources */,
+				C89D253E1020AE7300095B1D /* dec_packet.cpp in Sources */,
+				C89D25401020AE7300095B1D /* dec_syntax.cpp in Sources */,
+				C89D25421020AE7300095B1D /* dec_t1_comp.cpp in Sources */,
+				C89D25431020AE7300095B1D /* dec_t1_pass.cpp in Sources */,
+				C89D25441020AE7300095B1D /* dec_tagtree.cpp in Sources */,
+				C89D25451020AE7300095B1D /* dec_tsk.cpp in Sources */,
+				C89D25461020AE7300095B1D /* mq_decoder.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C844F0A01003FE0100D7EF6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C844F0AD1003FE1100D7EF6D /* jp2viewer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C844F13610040A0B00D7EF6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C844F14310040A4500D7EF6D /* batchdecode.cpp in Sources */,
+				C89D250D1020AE5700095B1D /* block_decoder.cpp in Sources */,
+				C89D250E1020AE5700095B1D /* bmi_block_decoder.cpp in Sources */,
+				C89D250F1020AE5700095B1D /* bmi_mq_decoder.cpp in Sources */,
+				C89D25101020AE5700095B1D /* dec_dwt.cpp in Sources */,
+				C89D25111020AE5700095B1D /* dec_init.cpp in Sources */,
+				C89D25121020AE5700095B1D /* dec_io.cpp in Sources */,
+				C89D25131020AE5700095B1D /* dec_jp2.cpp in Sources */,
+				C89D25141020AE5700095B1D /* dec_mq.cpp in Sources */,
+				C89D25151020AE5700095B1D /* dec_packet.cpp in Sources */,
+				C89D25161020AE5700095B1D /* dec_syntax.cpp in Sources */,
+				C89D25171020AE5700095B1D /* dec_t1_comp.cpp in Sources */,
+				C89D25181020AE5700095B1D /* dec_t1_pass.cpp in Sources */,
+				C89D25191020AE5700095B1D /* dec_tagtree.cpp in Sources */,
+				C89D251A1020AE5700095B1D /* dec_tsk.cpp in Sources */,
+				C89D251B1020AE5700095B1D /* mq_decoder.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB916508733D950010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				CUDA_HOST_COMPILATION = "c++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Developer/CUDA/lib/**",
+					"/usr/local/cuda/linclude/**",
+					"/Developer/CUDA/common/lib/**",
+				);
+				OBJROOT = ..;
+				OTHER_LDFLAGS = (
+					"-L",
+					/usr/local/cuda/lib,
+				);
+				PREBINDING = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SYMROOT = ../exe;
+			};
+			name = Debug;
+		};
+		1DEB916608733D950010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				CUDA_HOST_COMPILATION = "c++";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Developer/CUDA/common/lib/**",
+					"/Developer/CUDA/lib/**",
+					"/usr/local/cuda/include/**",
+				);
+				OBJROOT = ..;
+				OTHER_LDFLAGS = (
+					"-L",
+					/usr/local/cuda/lib,
+					"-l",
+					cuda,
+					"-l",
+					cudart,
+				);
+				PREBINDING = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SYMROOT = ../exe;
+			};
+			name = Release;
+		};
+		C844EEE11002D54100D7EF6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				CUDA_PREPROCESSOR_DEFINITIONS = "MAC_OS MAC_32";
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					MAC_OS_32,
+					MAC_OS,
+				);
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "/usr/local/cuda/lib/**";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = staticlib;
+				OBJROOT = ..;
+				OTHER_CFLAGS = (
+					"-DMAC_OS",
+					"-DMAC_32",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DMAC_OS",
+					"-DMAC_32",
+				);
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRELINK_LIBS = "";
+				PRODUCT_NAME = decoder;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
+				SYMROOT = ../exe;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C844EEE21002D54100D7EF6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = YES;
+				CUDA_OPTIMIZATION_LEVEL = 3;
+				CUDA_PREPROCESSOR_DEFINITIONS = "MAC_OS MAC_32";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					MAC_OS_32,
+					MAC_OS,
+				);
+				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
+				LIBRARY_SEARCH_PATHS = "/usr/local/cuda/lib/**";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = (
+					"-DMAC_OS",
+					"-DMAC_32",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DMAC_OS",
+					"-DMAC_32",
+				);
+				OTHER_LDFLAGS = (
+					"-l",
+					cuda,
+					"-l",
+					cudart,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = decoder;
+				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C844F0A51003FE0100D7EF6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"/Developer/CUDA/lib/**",
+					"/usr/local/cuda/linclude/**",
+					"/Developer/CUDA/common/lib/**",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = "/usr/local/cuda/lib/**";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				OTHER_CFLAGS = (
+					"-DMAC_OS",
+					"-DMAC_32",
+				);
+				OTHER_LDFLAGS = (
+					"-lcuda",
+					"-lcudart",
+					"$(BUILD_DIR)/$(CONFIGURATION)/libdecoder.a",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = jp2viewer;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C844F0A61003FE0100D7EF6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = "./decoder/common/include/**";
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/cuda/lib/**",
+					"$(BUILD_DIR)/$(CONFIGURATION)/**",
+				);
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				OTHER_CFLAGS = (
+					"-DMAC_OS",
+					"-DMAC_32",
+				);
+				OTHER_LDFLAGS = (
+					"-l",
+					cuda,
+					"-lcudart",
+					"-ldecoder",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = jp2viewer;
+				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C844F13B10040A0B00D7EF6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = "/usr/local/cuda/lib/**";
+				OTHER_CFLAGS = (
+					"-DMAC_OS",
+					"-DMAC_32",
+				);
+				OTHER_LDFLAGS = (
+					"-lcuda",
+					"-lcudart",
+					"$(BUILD_DIR)/$(CONFIGURATION)/libdecoder.a",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = batchdecode;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C844F13C10040A0B00D7EF6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = ./decoder/common/include;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILD_DIR)/$(CONFIGURATION)/**",
+					"/usr/local/cuda/lib/**",
+				);
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				OTHER_CFLAGS = (
+					"-DMAC_OS",
+					"-DMAC_32",
+				);
+				OTHER_LDFLAGS = (
+					"-l",
+					cuda,
+					"-l",
+					cudart,
+					"-ldecoder",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = batchdecode;
+				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB916408733D950010E9CD /* Build configuration list for PBXProject "decoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB916508733D950010E9CD /* Debug */,
+				1DEB916608733D950010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C844EEE31002D55F00D7EF6D /* Build configuration list for PBXNativeTarget "decoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C844EEE11002D54100D7EF6D /* Debug */,
+				C844EEE21002D54100D7EF6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C844F0AE1003FE1200D7EF6D /* Build configuration list for PBXNativeTarget "jp2viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C844F0A51003FE0100D7EF6D /* Debug */,
+				C844F0A61003FE0100D7EF6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C844F13D10040A2A00D7EF6D /* Build configuration list for PBXNativeTarget "batchdecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C844F13B10040A0B00D7EF6D /* Debug */,
+				C844F13C10040A0B00D7EF6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

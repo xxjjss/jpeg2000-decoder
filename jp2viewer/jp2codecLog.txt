@@ -1,0 +1,88 @@
+occupy  stream 00  [ 1]
+occupy  stream 01  [ 2]
+occupy  stream 02  [ 3]
+occupy  stream 03  [ 4]
+occupy  stream 04  [ 5]
+occupy  stream 05  [ 6]
+occupy  stream 06  [ 7]
+occupy  stream 00  [ 1]
+occupy  stream 01  [ 2]
+occupy  stream 02  [ 3]
+occupy  stream 03  [ 4]
+occupy  stream 04  [ 5]
+occupy  stream 05  [ 6]
+Release stream 06  [ 5]
+Release stream 06  [ 4]
+occupy  stream 06  [ 5]
+Release stream 07  [ 4]
+Release stream 07  [ 3]
+occupy  stream 07  [ 4]
+occupy  stream 08  [ 5]
+Release stream 09  [ 4]
+Release stream 09  [ 3]
+Release stream 09  [ 2]
+Release stream 09  [ 1]
+
+
+occupy  stream 09  [ 2]
+occupy  stream 10  [ 3]
+occupy  stream 11  [ 4]
+occupy  stream 12  [ 5]
+occupy  stream 13  [ 6]
+occupy  stream 14  [ 7]
+occupy  stream 15  [ 8]
+occupy  stream 16  [ 9]
+
+
+occupy  stream 17  [10]
+occupy  stream 18  [11]
+occupy  stream 19  [12]
+occupy  stream 00  [13]
+occupy  stream 01  [14]
+occupy  stream 02  [15]
+occupy  stream 03  [16]
+occupy  stream 04  [17]
+
+
+occupy  stream 00  [ 1]
+occupy  stream 01  [ 2]
+occupy  stream 02  [ 3]
+occupy  stream 03  [ 4]
+occupy  stream 04  [ 5]
+occupy  stream 00  [ 1]
+occupy  stream 01  [ 2]
+occupy  stream 02  [ 3]
+occupy  stream 03  [ 4]
+occupy  stream 04  [ 5]
+occupy  stream 05  [ 6]
+Release stream 06  [ 5]
+occupy  stream 06  [ 6]
+Release stream 07  [ 5]
+Release stream 07  [ 4]
+Release stream 07  [ 3]
+occupy  stream 07  [ 4]
+occupy  stream 08  [ 5]
+Release stream 09  [ 4]
+Release stream 09  [ 3]
+Release stream 09  [ 2]
+Release stream 09  [ 1]
+
+
+occupy  stream 09  [ 2]
+occupy  stream 10  [ 3]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

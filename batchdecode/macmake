@@ -1,0 +1,32 @@
+KDU_GLIBS =
+
+CC = g++
+
+INCLUDES = -I../decoder/common/include -I../decoder/tools/include -I../decoder/cudainterface/include
+C_OPT = -O3 -Wall -Wno-uninitialized -Wno-deprecated $(KDU_GLIBS)
+C_OPT += -D_FINAL	# release build disable this line
+C_OPT += -DNDEBUG 	# debug build disable this line
+C_OPT += -msse2 -m32  -DNDEBUG -DMAC_OS -DMAC_32 
+
+CFLAGS = $(INCLUDES) $(C_OPT) 
+LIBS = -lm -lpthread # You may comment out "-lpthreads" if coresys was
+                     # built using -DKDU_NO_THREADS
+
+BIN_DIR = ../../exe/make_exe
+LIB_SRC = $(BIN_DIR)/libbmidecoder.a
+CU_LIBS = /usr/local/cuda/lib/libcudart.dylib  /usr/local/cuda/lib/libcublas.dylib
+
+all :: batchdecode
+
+clean:
+	rm -f *.o *.so *.a
+
+batchdecode :: ./batchdecode.cpp $(LIB_SRC)
+	$(CC) $(CFLAGS) ./batchdecode.cpp \
+	      -o $(BIN_DIR)/batchdecode $(LIBS) \
+	      $(LIB_SRC) $(CU_LIBS)
+
+
+#libbmidecoder.so :: $(LIB_DIR)/libbmidecoder.so
+
+#libbmidecoder.a :: $(LIB_DIR)/libbmidecoder.a

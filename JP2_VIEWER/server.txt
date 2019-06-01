@@ -1,0 +1,9 @@
+\BMI
+192.168.0.101
+2000
+224.1.2.3
+
+//1.  \BMI            : folder name for saved file
+//2.  192.168.0.120   : ip address assigned to DSP board
+//3.  2000            : port number used by DSP board
+//4.  224.1.2.3       : udp ip address used by DSP board
